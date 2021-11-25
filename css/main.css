@@ -1,0 +1,110 @@
+body {
+  background: black;
+}
+
+#game-container {
+  display: none;
+  padding: 15px;
+  background: #7788F1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.game-info-container {
+  margin-bottom: 10px;
+}
+
+.game-info {
+  display: inline-block;
+}
+
+.timer, .lives, .mines {
+  margin-right: 20px;
+}
+
+.lives .icon {
+  padding: 10px 13px;
+  color: red;
+}
+
+.smiley {
+  cursor: pointer;
+  float: right;
+}
+
+.icon {
+  padding: 10px;
+  background: white;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.value {
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  background: white;
+}
+
+.square {
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid black;
+  cursor: pointer;
+  background: gray;
+}
+
+.square:hover {
+  background: #a3a0a0;
+}
+
+.square.shown {
+  background: white;
+}
+
+.square.shown:hover {
+  background: white;
+}
+
+.square.exploded {
+  background: red;
+}
+
+.square.exploded.shown:hover {
+  background: red;
+}
+
+table {
+  margin: auto;
+  border: 1px solid black;
+}
+
+#difficulty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 250px;
+  background: #7788F1;
+}
+
+#difficulty h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#difficulty button {
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
