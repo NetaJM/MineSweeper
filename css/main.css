@@ -1,16 +1,21 @@
 body {
-  background: black;
+  background-image: url(img/img1.jpg);
+  width: 981px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #game-container {
   display: none;
-  padding: 15px;
-  background: #7788F1;
+  padding: 120px;
+  background-image: url(img/img1.jpg);
+  background-size: contain;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .game-info-container {
@@ -82,29 +87,42 @@ body {
 
 table {
   margin: auto;
+  width: 400px;
+  height: 400px;
   border: 1px solid black;
 }
 
 #difficulty {
+background-image: url(img/img3.jpg);
+background-size: contain;
+font-family: sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 250px;
-  background: #7788F1;
+  width: 850px;
+  height: 550px;
+  cursor: wait;  
+  
 }
 
 #difficulty h1 {
+  background-color: rgba(166, 212, 228, 0.4);
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 #difficulty button {
-  margin: auto;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 110%;
+  border-radius: 10%;
+  background-color: rgba(28, 211, 224,.15);
+  margin: auto; 
   display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  cursor: pointer;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  padding: 20px;
+cursor: wait;   
 }
