@@ -1,1 +1,1 @@
-# mine-sweeper-sprint1
+# mineSweeper
