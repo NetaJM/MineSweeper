@@ -1,15 +1,15 @@
 function getEmptyPlaceForMine(clickedCoord, minesCoords) {
-  var dimension = DIFFICULTY[game.currentDifficulty].dimension
-  var foundPlace = false;
-  var randomPlace;
+  let dimension = DIFFICULTY[game.currentDifficulty].dimension
+  let foundPlace = false;
+  let randomPlace;
   while (!foundPlace) {
-    var i = getRandomIntInclusive(0, dimension-1);
-    var j = getRandomIntInclusive(0, dimension-1);
+    let i = getRandomIntInclusive(0, dimension - 1);
+    let j = getRandomIntInclusive(0, dimension - 1);
     randomPlace = '' + i + j;
     // Check if coordinate has a mine
-    var isEmptyPlace = minesCoords[randomPlace] === undefined;
+    let isEmptyPlace = minesCoords[randomPlace] === undefined;
     // Check if not same coordinate that player clicked at first
-    var notPlayerClick = i !== clickedCoord.i && j !== clickedCoord.j
+    let notPlayerClick = i !== clickedCoord.i && j !== clickedCoord.j
     if (isEmptyPlace && notPlayerClick) {
       foundPlace = true;
     }
@@ -18,11 +18,11 @@ function getEmptyPlaceForMine(clickedCoord, minesCoords) {
 }
 
 function revealNeighboringSquares(coord) {
-  var sorroundingSquares = getSorroundingSquares(coord)
-  for(var i = 0; i < sorroundingSquares.length; i++) {
-    var squareCoord = sorroundingSquares[i];
+  let sorroundingSquares = getSorroundingSquares(coord)
+  for (let i = 0; i < sorroundingSquares.length; i++) {
+    let squareCoord = sorroundingSquares[i];
     if (gBoard[squareCoord.i] && gBoard[squareCoord.i][squareCoord.j]) {
-      var squareInfo = gBoard[squareCoord.i][squareCoord.j];
+      let squareInfo = gBoard[squareCoord.i][squareCoord.j];
       if (!squareInfo.isShown && !squareInfo.isMine) {
         // Reveal the square
         gBoard[squareCoord.i][squareCoord.j].isShown = true;
@@ -36,15 +36,15 @@ function revealNeighboringSquares(coord) {
 }
 
 function getNeighborInfo(coord) {
-  var minesAround = 0;
-  var sorroundingSquares = getSorroundingSquares(coord);
-  for(var i = 0; i < sorroundingSquares.length; i++) {
-    var squareCoord = sorroundingSquares[i];
+  let minesAround = 0;
+  let sorroundingSquares = getSorroundingSquares(coord);
+  for (let i = 0; i < sorroundingSquares.length; i++) {
+    let squareCoord = sorroundingSquares[i];
     if (gBoard[squareCoord.i] && gBoard[squareCoord.i][squareCoord.j] && gBoard[squareCoord.i][squareCoord.j].isMine) {
       minesAround++;
     }
   }
-  var isNeighbor = minesAround > 0;
+  let isNeighbor = minesAround > 0;
   return {
     isNeighbor: isNeighbor,
     neighborValue: minesAround
