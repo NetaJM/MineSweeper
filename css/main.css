@@ -1,0 +1,135 @@
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono:700";
+
+body {
+  background-image: url("img/111.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#game-container {
+  display: none;
+  padding: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto Sans", monospace;
+}
+
+.game-info-container {
+  margin-bottom: 12px;
+  display: inline-block;
+  background-color: none;
+}
+
+.game-info {
+  background-color: none;
+}
+
+.timer,
+.lives {
+  display: inline-block;
+}
+
+.mines {
+  display: none;
+}
+
+.lives .icon {
+  padding: 10px 13px;
+  color: red;
+  display: inline-block;
+}
+
+.smiley {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 1px;
+  padding-left: 82px;
+  padding-right: 82px;
+}
+
+.icon {
+  padding: 10px;
+  background-color: rgba(222, 222, 222, 0.863);
+  display: inline-block;
+}
+
+.value {
+  padding: 10px;
+  background-color: rgba(222, 222, 222, 0.863);
+  display: inline-block;
+}
+
+.square {
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 2.5px solid rgb(212, 207, 207);
+  cursor: pointer;
+  background-color: light rgb(153, 149, 149);
+}
+
+.square:hover {
+  background: #a3a0a0;
+}
+
+.square.shown {
+  border: 2px solid;
+  background-color: #6b6666;
+  border-color: darkgray;
+  box-sizing: border-box;
+}
+
+.square.shown:hover {
+  background: #6b6666;
+}
+
+.square.exploded {
+  background: #6b6666;
+}
+
+.square.exploded.shown:hover {
+  background: red;
+}
+
+table {
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  border: 1px solid darkgray;
+  background-color: #808080;
+}
+
+#difficulty {
+  font-family: "Roboto Sans", monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid darkgray;
+  background-color: #808080;
+  width: 250px;
+  height: 150px;
+}
+
+#difficulty h1 {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#difficulty button {
+  font-family: "Roboto Sans", monospace;
+  font-weight: bold;
+  border: 1px solid #808080;
+  background-color: rgba(222, 222, 222, 0.3);
+  margin: auto;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}

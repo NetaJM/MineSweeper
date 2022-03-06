@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <Link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div id="game-container">
+    <div class="game-info-container">
+      <div class="game-info timer">
+        <div class="icon">
+          <span>&#9201;</span>
+        </div>
+        <div class="value">
+          <span id="timer">0</span>
+        </div>
+      </div>
+      <div class="game-info mines">
+        <div class="icon">
+          <span>&#128163;</span>
+        </div>
+        <div class="value">
+          <span id="mines">0</span>
+        </div>
+      </div>
+      <div class="game-info smiley" onclick="playAgain()">
+        <div id="smiley" class="icon">
+          <span>&#128522;</span>
+        </div>
+      </div>
+    </div>
+    <div class="game-info lives">
+      <div class="icon">
+        <span>&#10084;</span>
+      </div>
+      <div class="value">
+        <span id="lives">3</span>
+      </div>
+    </div>
+    <table cellspacing="0">
+      <tbody id="gBoard"></tbody>
+    </table>
+  </div>
+
+  <!-- Modals -->
+  <div id="difficulty">
+    <h1>CHOOSE DIFFICULTY</h1>
+    <button onclick="chooseDifficulty(MEDIUM)">MEDIUM</button>
+    <button onclick="chooseDifficulty(EXPERT)">EXPERT</button>
+    <button onclick="chooseDifficulty(IMPOSSIBLE)">IMPOSSIBLE</button>
+  </div>
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/board.js"></script>
+  <script src="js/square.js"></script>
+  <script src="js/utils.js"></script>
+</body>
+
+</html>
